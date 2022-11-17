@@ -82,10 +82,6 @@
     font-weight: 700; 
     padding: 0 20px;
 }
-.menu_ul > li > h2{ 
-    display: inline-block;
-    font-size: 17px;
-}
 .menu_ul a{
     display: block;
     width: 100%;
@@ -201,14 +197,14 @@
     height: 300px;
     background: url(../img/아트온\ 바비콘\ 로고.png) no-repeat center / cover;
 }
-.f_desc{ /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<이부분*/
+.f_desc{ 
     width: 500px;
 }
 .f_title{
     font-size: 24px;
     font-weight: 800;
 }
-.cst_num{ /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<이부분*/
+.cst_num{
     width: 125px;
 }
 .cst_num img{   
