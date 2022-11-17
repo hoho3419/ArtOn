@@ -1,8 +1,47 @@
+/* *****************************폰트***************************** */
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+.nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
 /* *****************************헤더***************************** */
 .header{
     width: 100%;
     height: 80px;
     background-color: #fcffcb;
+}
+.header_event{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 999999;
+}
+.header_area{
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +68,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    white-space: nowrap;
 }
 .menu_ul li{
     position: relative;
@@ -51,19 +91,23 @@
 .icon_list{
     display: flex;
     align-items: center;
+    height: 100%;
 }
 .search_area{
     display: flex;
     margin-right: 10px;
 }
-.icon_area{
+.icon_area{    
     display: flex;
     align-items: center;
+    height: 100%;
+    padding-top: 13px;
+    box-sizing: border-box;
 }
 .search_bar{
     width: 30px;
     height: 30px;
-    background: url(../img/search2.png) no-repeat center / 35px;
+    background: url(../img/g_search.png) no-repeat center / 25px;
 }
 #srch_con{
     width: 250px;
@@ -77,43 +121,49 @@
 .search{
     margin: 0px 10px;
 }
+.icon_sec{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0px 10px;
+}
 .rank_img{
     width: 40px;
     height: 40px;
-    background: url(../img/랭크이미지.png) no-repeat center / cover;
+    background: url(../img/g_lank.png) no-repeat center / 30px;
 }
 .login_img{
     width: 40px;
     height: 40px;
-    background: url(../img/로그인아이콘.png) no-repeat center / cover;
+    background: url(../img/g_login.png) no-repeat center / 30px;
 }
 .my_img{
     width: 40px;
     height: 40px;
-    background: url(../img/마이페이지아이콘.png) no-repeat center / cover;
-}
-.icon{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin: 0px 8px;
-    transform: translateY(8px);
+    background: url(../img/마이페이지아이콘.png) no-repeat center / 60px;
 }
 .text{
     font-size: 13px;
-    text-align: center;
+    font-weight: 600;
     opacity: 0;
     transition: all .5s;
 }
 .my_img + .text{
     transform: translateX(-7px);
+    white-space: nowrap;
 }
-.icon:hover > .text{
+.icon_sec:hover .text{
     opacity: 1;
 }
 /* ***************************** 메인 ***************************** */
 .main{
-    min-height: 600px;
+    min-height: 1100px;
+}
+.box{
+    width: 100%;
+    height: 500px;
+    background-color: rebeccapurple;
 }
 /* ***************************** 푸터 ***************************** */
 .footer{
