@@ -1,0 +1,642 @@
+.main{
+    width: 100%;
+    margin-top: 50px;
+}
+/* 체크 되어 있을때 색깔 들어오는 클래스 */
+.sub_icon_chk{
+    background: #faffa0;
+}
+.rank_item_chk{
+    color: #22974a;
+}
+/* ***************************** 메인 슬라이드 ***************************** */
+.main_slide{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    position: relative;
+}
+.first_section{
+    width: 100%;
+    height: 70%;
+    transition: all .5s;
+}
+.second_section{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    transition: all .5s;
+}
+.top_content{
+    padding: 90px 0px 0px 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.top_desc{
+    width: 65%;
+    font-size: 45px;
+    margin-bottom: 4px;
+}
+.button_desc{
+    font-size: 30px;
+    padding-top: 5px;
+}
+.main_img{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    z-index: 999999;
+    display: none;
+    cursor: pointer;
+}
+.buy_button{
+    position: absolute;
+    left: 7%;
+    top: 53%;
+    font-size: 21px;
+    font-weight: 900;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    
+}
+.img_indi{
+    width: 700px;
+    height: 80%;
+    position: absolute;
+    left: 4%;
+    top: 10%;
+    padding: 0px 60px;
+    box-sizing: border-box;
+}
+.left_icon{
+    position: absolute;
+    left: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right_icon{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.indi_section{
+    width: 100%;
+    height: 110%;
+    position: relative;
+    overflow: hidden;
+}
+.indi{
+    width: 87px;
+    height: 114px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.item1{
+    top: 45%;
+    transition: top .3s;
+    transition-delay: .5s;
+}
+/* ***************************** NEW OPEN ***************************** */
+.new_section{
+    width: 100%;
+    margin: 100px 0;
+    overflow: hidden;
+}
+.new_section > h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.new_img{
+    float: left;
+    position: relative;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+.new_main_img{
+    text-align: center;
+    font-size: 23px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+}
+.first_item_img{
+    width: 380px;
+    height: 618px;
+}
+.first_title{
+    font-weight: 900;
+}
+.first_title + div{
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 700;
+}
+.discount_icon{
+    position: absolute;
+    left: 4%;
+    bottom: 14%;
+    width: 65px;
+    height: 65px;
+    background-color: #22974a;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    font-size: 22px;
+    color: #fff;
+    line-height: 65px;
+}
+.date_circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-70%);
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ed8844;
+    border-radius: 50%;
+    background: #00000091;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 200px;
+    color: #fff;
+    border-left: 10px solid #ddd;
+}
+.side_img{
+    width: 235px;
+    height: 333px;
+}
+.side_discount_icon{
+    position: absolute;
+    left: 4%;
+    bottom: -6%;
+    width: 50px;
+    height: 50px;
+    background-color: #22974a;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    font-size: 18px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}
+.side_date_circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-70%);
+    width: 150px;
+    height: 150px;
+    border: 10px solid #ed8844;
+    border-radius: 50%;
+    background: #00000091;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 150px;
+    color: #fff;
+    border-left: 10px solid #ddd;
+    text-align: center;
+    transition: all .5s;
+}
+.side_desc{
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    font-size: 19px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    opacity: 0;
+    font-style: italic;
+}
+.new_img:hover > a > .side_date_circle{
+    opacity: 0;
+}
+.new_img:hover > a > .side_desc{
+    opacity: 1;
+}
+/* ***************************** ARTon's PICK ***************************** */
+.art_pick_section{
+
+}
+.art_pick_section > h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.pick_area{
+    display: flex;
+    gap: 10px;
+}
+.pick_info{
+    position: relative;
+    overflow: hidden;
+}
+.pick_img{
+    width: 290px;
+}
+.pick_desc{
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 100%;
+    height: 50%;
+    background: rgba(224,224, 224, 0.75);
+    display: flex;
+    font-size: 27px;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+.pick_info:hover > .pick_desc{
+    top: 50%;
+}
+.art_button{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px;
+}
+.btn_desc{
+    width: 200px;
+    height: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 19px;
+    line-height: 70px;
+    background: #fff;
+    text-align: center;
+    color: #000;
+    border: 1px solid #ddd;
+}
+/* ***************************** 서브 슬라이드 ***************************** */
+.sub_slide_section{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.sub_banner{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+.banner1{
+    background: url(../img/sub_banner1.png) no-repeat center / cover;
+    left: 0%;
+}
+.banner2{
+    left: 100%;
+    background: url(../img/sub_banner2.png) no-repeat center / cover;
+}
+.banner3{
+    left: 100%;
+    background: url(../img/sub_banner3.png) no-repeat center / cover;
+}
+#sub_left{
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translateY(40%);    
+    z-index: 99999;
+    cursor: pointer;
+}
+#sub_right{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(40%);
+    z-index: 99999;
+    cursor: pointer;
+}
+.sub_indi{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.sub_indi_icon{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #d0d56a;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* ***************************** RANK ***************************** */
+.rank_section{
+    margin: 100px 0px;
+}
+.rank_section > h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.rank_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rank_menu_area{
+    width: 600px;
+    line-height: 80px;
+    display: inherit;
+    justify-content: space-around;
+    border: 2px solid #ddd;
+}
+.rank_item{
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* 탭으로 구현하는 곳 */
+.rank_article{
+    justify-content: space-around;
+    margin: 100px 0;
+    text-align: center;
+    display: none;
+}
+.rank_cate{
+    position: relative;
+}
+.ranking_icon{
+    position: absolute;
+    left: 17px;
+    top: -13px;
+    width: 50px;
+    height: 50px;
+    background-color: #f1c40f;
+    z-index: 999;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+}
+.rank_img_box{
+    position: relative;
+    width: 352px;
+    height: 400px;
+    overflow: hidden;
+}
+.rank_img_box::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 400px;
+    height: 500px;
+    filter: blur(10px);
+    transition: all .5s;
+}
+.R_back_img1::after{
+    background: url(../img/웃는남자.png) no-repeat -45px -30px;
+}
+.R_back_img2::after{
+    background: url(../img/art_pick/musical_2.jpg) no-repeat -45px -30px;
+}
+.R_back_img3::after{
+    background: url(../img/art_pick/musical_4.jpg) no-repeat -45px -30px;
+}
+
+.C_back_img1::after{
+    background: url(../img/나훈아_콘서트.jpg) no-repeat -45px -30px;
+}
+.C_back_img2::after{
+    background: url(../img/art_pick//concert_3.jpg) no-repeat -45px -30px;
+}
+.C_back_img3::after{
+    background: url(../img/art_pick/concert_4.jpg) no-repeat -45px -30px;
+}
+.T_back_img1::after{
+    background: url(../img/넓은하늘_연극.png) no-repeat -45px -30px;
+}
+.T_back_img2::after{
+    background: url(../img/play_2.jpg) no-repeat -45px -30px;
+}
+.T_back_img3::after{
+    background: url(../img/paly_3.jpg) no-repeat -45px -30px;
+}
+.rank_img_box > img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 280px;
+    z-index: 99;
+}
+.rank_img_box:hover::after{
+    transform: scale(1.5);
+}
+.rank_info{    
+    width: 352px;
+    line-height: 20px;
+    font-size: 17px;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px 30px 0px 30px;
+    box-sizing: border-box;
+}
+.rank_info + p{
+    width: 352px;
+    font-size: 16px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 0 15px 0;
+    border-bottom: 2px solid #000;
+}
+.dis_flex{
+    display: flex;
+}
+/* ***************************** MEDIA ***************************** */
+.media_section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+}
+.media_info{
+    width: 35%;
+    text-align: center;
+    color: #fff;
+}
+.media_attention{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 200px;
+}
+.media_attention span{
+    position: relative;
+}
+.media_attention span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: -10px;
+    width: 50px;
+    height: 10px;
+    background-color: #22974a;
+    transition: all .5s;
+}
+.media_attention span:hover::after{
+    width: 100%;
+}
+.media_title{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+.media_comment{
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 800;
+}
+iframe{
+    width: 65%;
+    height: 560px;
+}
+/* ***************************** REVIEW ***************************** */
+.review_section{
+    width: 1380px;
+    height: 600px;
+    margin: auto;
+    padding: 100px 0;
+    overflow: hidden;
+}
+.review_section > h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.review_area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.review_img_box{
+    width: 460px;
+    height: 660px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.review_item1{
+    left: 0;
+}
+.review_item2{
+    left: 460px;
+}
+.review_item3{
+    left: 920px;
+}
+.review_item4{
+    left: 1380px;
+}
+.review_img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    transform: translatex(-50%);
+    overflow: hidden;
+}
+.review_img1{
+    background: url(../img/넓은하늘_연극.png) no-repeat center / contain;
+}
+.review_img2{
+    background: url(../img/review_2.jpg) no-repeat center / contain;
+}
+.review_img3{
+    background: url(../img/review_3.jpg) no-repeat center / contain;
+}
+.review_img4{
+    background: url(../img/review_4.jpg) no-repeat center / contain;
+}
+.review{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 100%;
+    height: 50%;
+    background: rgba(0,0, 0, 0.75);
+    font-size: 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    color: #fff;
+    transform: translatex(-50%);
+    transition: all .5s;
+}
+.review > p{
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+}
+.review_img:hover .review{
+    top: 50%;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+}
+#review_r_button{
+    background: url(../img/review_right_button.png) no-repeat center;
+    right: 437px;
+    top: 459px;
+}
+#review_l_button{
+    background: url(../img/review_left_button2.png) no-repeat center;
+    left: 437px;
+    top: 459px;
+}

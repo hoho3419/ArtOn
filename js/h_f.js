@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    let box_heigt = $('.box').height();
-    let box_top = $('.box').offset().top + box_heigt;
+    let box_heigt = $('.main_slide').height();
+    let box_top = $('.main_slide').offset().top + box_heigt;
     
     $(window).scroll(function(){
         let header_bot = $(window).scrollTop();
