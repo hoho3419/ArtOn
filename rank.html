@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtOn</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/rank.css">
+    <link rel="icon" href="./img/최종_바비콘.png">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/item_list.js"></script>
+    <script src="./js/h_f.js"></script>
+    <script src="./js/rank.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header class="header">
+        <div class="header_area">
+            <div class="logo">아트온 로고<a href="index.html"></a></div>
+            <ul class="menu_ul">
+                <li>
+                    <a href="#">콘서트</a>
+                </li>
+                <li>
+                    <a href="#">뮤지컬</a>
+                </li>
+                <li>
+                    <a href="#">연극</a>
+                </li>
+                <li>
+                    <a href="#">클래식</a>
+                </li>
+                <li>
+                    <a href="#">전시</a>
+                </li>
+                <li>
+                    <a href="#">아동</a>
+                </li>
+            </ul>
+            <div class="icon_list">
+                <div class="search_area">
+                    <div class="search">
+                        <a href="#">
+                            <div class="search_bar">
+                            </div>
+                        </a>
+                    </div>
+                    <input id="srch_con" type="text" value="aaa">
+                </div>
+                <div class="icon_area">
+                    <div class="icon_sec">
+                        <a href="rank.html">
+                            <div class="rank_img"></div>
+                            <span class="text">랭킹</span>
+                        </a>
+                    </div>
+                    <div class="icon_sec">
+                        <a href="#">
+                            <div class="login_img"></div>
+                            <div class="text">로그인</div>
+                        </a>
+                    </div>
+                    <div class="icon_sec">
+                        <a href="#">
+                            <div class="my_img"></div>
+                            <div class="text">마이페이지</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="contents_area">
+            <div class="rank_area">
+                <h2 class="rank_title">랭킹</h2>
+                <ul class="rank_menu">
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=0">전체</a></li>
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=1">콘서트</a></li>
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=2">뮤지컬</a></li>
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=3">연극</a></li>
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=4">클래식/무용</a></li>
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=5">전시/행사</a></li>
+                    <li class="rank_li"><a class="menu_a" href="rank.html?rank=6">아동/가족</a></li>
+                </ul>
+                <div class="rank_date">
+                    <div class="date_cate">
+                        <div id="rank_day" class="date">
+                            <a href="#">
+                                <div class="high_bar"></div>
+                                일간
+                            </a>
+                        </div>
+                        <div id="rank_week" class="date">
+                            <a href="#">
+                                <div class="high_bar"></div>
+                                주간
+                            </a>
+                        </div>
+                        <div id="rank_month" class="date">
+                            <a href="#">
+                                <div class="high_bar"></div>
+                                월간
+                            </a>
+                        </div>
+                        <div id="rank_year" class="date">
+                            <a href="#">
+                                <div class="high_bar"></div>
+                                연간
+                            </a>
+                        </div>
+                        <input type="text" id="from_date" class="date_pick">
+                    </div>
+                </div>
+                <div class="high_rank">
+                    <div class="high_rank_box">
+                        <a href="#">
+                            <div class="rank_item_box">
+                                <img class="rank_item" src="./img/나훈아_콘서트.jpg" alt="">
+                                <div class="rank_mark">1위</div>
+                            </div>
+                            <p class="item_title">[서울] 2022년 ‘Dream 55’ 나훈아 앵콜 콘서트</p>
+                            <div class="item_info">
+                                <p>2022.12.17~2022.12.18</p>
+                                <p>KSPO DOME(올림픽체조경기장)</p>
+                            </div>
+                            <div class="indi_area">
+                                <div class="reservate_percen">38.5%</div>
+                                <img src="./img/rank/love_icon.png" alt=""> 433
+                            </div>
+                        </a>
+                    </div>
+                    <div class="high_rank_box">
+                        <a href="#">
+                            <div class="rank_item_box">
+                                <img class="rank_item" src="./img/나훈아_콘서트.jpg" alt="">
+                                <div class="rank_mark">1위</div>
+                            </div>
+                            <p class="item_title">[서울] 2022년 ‘Dream 55’ 나훈아 앵콜 콘서트</p>
+                            <div class="item_info">
+                                <p>2022.12.17~2022.12.18</p>
+                                <p>KSPO DOME(올림픽체조경기장)</p>
+                            </div>
+                            <div class="indi_area">
+                                <div class="reservate_percen">38.5%</div>
+                                <img src="./img/rank/love_icon.png" alt=""> 433
+                            </div>
+                        </a>
+                    </div>
+                    <div class="high_rank_box">
+                        <a href="#">
+                            <div class="rank_item_box">
+                                <img class="rank_item" src="./img/나훈아_콘서트.jpg" alt="">
+                                <div class="rank_mark">1위</div>
+                            </div>
+                            <p class="item_title">[서울] 2022년 ‘Dream 55’ 나훈아 앵콜 콘서트</p>
+                            <div class="item_info">
+                                <p>2022.12.17~2022.12.18</p>
+                                <p>KSPO DOME(올림픽체조경기장)</p>
+                            </div>
+                            <div class="indi_area">
+                                <div class="reservate_percen">38.5%</div>
+                                <img src="./img/rank/love_icon.png" alt=""> 433
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <ul class="rank_item_list">
+                    <li class="rank_list_box">
+                        <div class="list_rank">4위</div>
+                        <a href="#">
+                            <div class="list_img_box">
+                                <img class="list_img" src="./img/rank/rank_1.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="list_title_box">
+                            <a href="#">
+                                <p class="list_title">2022 HAPPY CHANYEOL-DAY</p>
+                            </a>
+                            <div class="wish_total">
+                                <img src="./img/rank/love_icon.png" style="margin-right: 8px;" alt="찜하기 아이콘"><span>233</span> 
+                                <img src="./img/rank/star_5.jpg" style="width: 88px;margin-left: 30px;" alt="별점 아이콘">
+                            </div>
+                        </div>
+                        <div class="list_info">
+                            <p>2022.12.01~2022.12.01</p>
+                            <p>건국대학교 새천년관 대공연장</p>
+                        </div>
+                        <div class="reservate_percen">20.5%</div>
+                    </li>  
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="contents_area">
+            <a href="#"><div class="f_logo">아트온 로고</div></a>
+            <div class="f_desc">
+                <p class="f_title">아트온</p >
+                <p>서울특별시 강남구 서초동 서울로 1길 1 대표 아트온</p>
+                <p>사업자 등록번호: 1001-1314-15444 / 통신판매번호: 제 2002-00000호</p>
+                <p>Copyright YM_ARTON INC.ALL Rights Reserved</p>
+            </div>
+            <div class="cst_num">
+                <img src="./img/call.png" alt="">
+                <span>고객센터</span>
+                <p class="f_number">1544-0000</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
