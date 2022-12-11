@@ -1,5 +1,5 @@
 # ArtOn
-
+총 작업량 -> index.html(css.js) rank.html(css.js) search.html(css.js), h_f.css(js)
 11월 14일
   -> GNB 작업완료(header,footer)
 
@@ -69,7 +69,18 @@
         
       -> search.html
         1. HTML CSS 구조완성
-        2. 
+        2. main_slide 구조 변경 및 css js 수정
+        
+4일차
+      -> index.html, h_f 반응형 시작 
+        1. h_f 햄버그 버튼 및 사이드 바 HTML 생성
+        2. h_f css @media 작성 
+        3. index.css 구조 변경
+5일차 
+      -> index.html css 완성
+        1. index.html 구조 변경 완성
+        2. index.css 작성 
+        
         
         
         
