@@ -80,6 +80,7 @@
       -> index.html css 완성
         1. index.html 구조 변경 완성
         2. index.css 작성 
+        3. index.js 누락된 기능 
         
         
         
