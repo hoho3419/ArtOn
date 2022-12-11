@@ -10,6 +10,7 @@
 .rank_item_chk{
     color: #008049;
 }
+p{margin: 0;}
 /* ***************************** 메인 슬라이드 ***************************** */
 .main_slide{
     position: relative;
@@ -73,6 +74,7 @@
     top: 5%;
     z-index: 999999;
     cursor: pointer;
+    transition: all .5s;
 }
 .buy_button{
     position: absolute;
@@ -261,7 +263,8 @@
 }
 /* ***************************** ARTon's PICK ***************************** */
 .art_pick_section{
-
+    width: 100%;
+    margin-bottom: 100px;
 }
 .art_pick_section > h2{
     text-align: center;
@@ -272,14 +275,19 @@
 }
 .pick_area{
     display: flex;
-    gap: 10px;
 }
 .pick_info{
     position: relative;
     overflow: hidden;
+    width: calc((100% - 20px * 3) / 4);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.pick_info:nth-child(4){
+    margin: 0;
 }
 .pick_img{
-    width: 290px;
+    width: 100%;
 }
 .pick_desc{
     position: absolute;
@@ -325,14 +333,14 @@
 .sub_slide_section{
     position: relative;
     width: 100%;
-    height: 400px;
     overflow: hidden;
+    padding-bottom: 23%; 
 }
 .sub_banner{
     position: absolute;
-    top: 0%;
+    bottom: 0%;
     width: 100%;
-    height: 100%;
+    padding-bottom: 21%;
 }
 .banner1{left: 0%;}
 .banner2{left: 100%;}
@@ -341,7 +349,7 @@
     position: absolute;
     left: 3%;
     top: 50%;
-    transform: translateY(40%);    
+    transform: translateY(20%);    
     z-index: 99999;
     cursor: pointer;
 }
@@ -349,7 +357,7 @@
     position: absolute;
     right: 3%;
     top: 50%;
-    transform: translateY(40%);
+    transform: translateY(20%);
     z-index: 99999;
     cursor: pointer;
 }
@@ -430,7 +438,7 @@
     height: 100%;
     filter: blur(10px);
     transition: all .5s;
-    background-position: -41px -15px;
+    background-position: center;
 }
 .rank_front_img{
     position: absolute;
@@ -475,6 +483,8 @@
     display: flex;
     justify-content: space-between;
     background: #000;
+    padding-bottom: 20%;
+    position: relative;
 }
 .media_info{
     width: 35%;
@@ -518,7 +528,11 @@
 }
 iframe{
     width: 65%;
-    height: 560px;
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    top: 0%;
+    border: 0px;
 }
 /* ***************************** REVIEW ***************************** */
 .review_section{
@@ -527,6 +541,7 @@ iframe{
     margin: auto;
     padding: 100px 0;
     overflow: hidden;
+    position: relative;
 }
 .review_section > h2{
     text-align: center;
@@ -616,10 +631,223 @@ iframe{
 #review_r_button{
     background: url(../img/review_right_button.png) no-repeat center;
     right: 437px;
-    top: 459px;
+    top: 560px;
 }
 #review_l_button{
     background: url(../img/review_left_button2.png) no-repeat center;
     left: 437px;
-    top: 459px;
+    top: 560px;
+}
+/* ***************************** 반응형 ***************************** */
+/* 메인 슬라이드 이미지 크기 조정 */
+@media screen and (max-width : 1290px) {
+    .main_img{
+        width: 340px;
+        height: 450px;
+    }
+}
+@media screen and (max-width : 1230px) {
+    .main_img{
+        width: 250px;
+        height: 310px;
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    /* 뉴섹션 3 * 3 으로 바꾸기 */
+    .new_section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .new_main_img{
+        text-align: center;
+        font-size: 23px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 16px;
+        display: none;
+    }
+    .new_img {
+        margin: 0;
+        margin: 10px 40px;
+    }
+    .new_main_img {
+        display: none;
+    }
+    .new_section > h2 {
+        width: 100%;
+    }
+}
+@media screen and (max-width : 1075px) {
+    /* 랭크 어느정도 작아지면 1등만 보여지게 하기 */
+    .rank_img_area {
+        width: 562px;
+        height: 520px;
+    }
+    .rank_img_box {
+        background-position: center;
+    }
+    .rank_front_img {
+        width: 330px;
+        height: 430px;
+    }
+    .rank_info {
+        width: 100%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+    .rank_info + p {
+        width: 100%;
+    }
+    .rank_article {
+        margin: 50px 0;
+    }
+    .rank_cate:nth-child(2){
+        display: none;
+    }
+    .rank_cate:nth-child(3){
+        display: none;
+    }
+    /* 미디어 섹션에서 동영상만 보여지게 하기 */
+    .media_info{
+        display: none;
+    }
+    .media_section{
+        padding-bottom: 56.25%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    /* 리뷰 섹션 크기 조정 및 슬라이드 버튼 위치 조정 */
+    .review_section {
+        width: 460px;
+    }
+    #review_r_button {
+        background: url(../img/review_right_button.png) no-repeat center/ cover;
+        right: 5px;
+        top: 438px;
+    }
+    #review_l_button {
+        background: url(../img/review_left_button2.png) no-repeat center/ cover;
+        left: 5px;
+        top: 438px;
+    }
+    .btn{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width : 962px) {
+    /* 아트온 섹션 2 * 2 로 바꿔주기 */
+    .pick_area {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pick_info {
+        position: relative;
+        overflow: hidden;
+        width: calc((100% - 50px * 3) / 2);
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .pick_info:nth-child(4) {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    /* 서브 슬라이드 인디케이터 크기 조정 및 화살표 크기 조정 */
+    #sub_left {
+        width: 28px;
+        bottom: 50%;
+        transform: translateY(0%);
+    }
+    #sub_right{
+        width: 28px;
+        bottom: 50%;
+        transform: translateY(0%);
+    }
+    .sub_indi_icon {
+        width: 7px;
+        height: 7px;
+        border: 2px solid #d0d56a;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width : 725px) {
+    /* 메인 슬라이드 레이아웃 조정 */
+    .buy_button {
+        left: 50%;
+        bottom: 0;
+        z-index: 999;
+        transform: translateX(-50%);
+    }
+    .main_img {
+        width: 96%;
+        height: 84%;
+    }
+    .buy_button {
+        left: 50%;
+        bottom: 13px;
+        top: auto;
+        z-index: 9999;
+        transform: translateX(-50%);
+    }
+    .main_slide {
+        width: 90%;
+        height: 690px;
+    }
+    .img_indi {
+        display: none;
+    }
+}
+@media screen and (max-width: 645px) {
+   /* new 섹션 1 * 1 일때 이미지 2개 지우기 */
+    .new_img:nth-of-type(3),
+    .new_img:nth-of-type(4){
+        display: none !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* 아트온 섹션 공연 글자 작아지기 */
+    .pick_desc {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 400px) {
+    /* 랭크 공연 정보 폰트 키우기 */
+    .rank_item {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    /* 아트온 픽 폰트 줄이기 */
+    .pick_desc {
+        font-size: 12px;
+    }
+}
+/*  모바일로 들어왔을떄 보여주는 화면 */
+@media screen and (max-width: 360px) {
+    .main_slide {
+        height: 500px;
+    }
+    .main_img {
+        top: 1%;
+    }
+    .review_section {
+        display: none;
+    }
+    .media_section {
+        margin-bottom: 80px;
+    }
 }
