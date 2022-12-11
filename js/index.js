@@ -39,7 +39,7 @@ $(document).ready(function(){
     }
     // 서브 슬라이드 인디케이터 0번째에 색깔 들어오게 하는 클래스 넣어주기
     $('.sub_indi_icon').eq(sub_idx).addClass('sub_icon_chk')
-    // img 인디케이터 위치 잡아주기
+    // 메인 img 인디케이터 위치 잡아주기
     for(let i = 0;i<main_img_length;i++){
         $('.indi').eq(i).css({left: `${i * main_img_move}px`})
     }
@@ -55,18 +55,23 @@ $(document).ready(function(){
     })
     // 메인배너 오른쪽 버튼
     $('.right_icon').on('click',function(){
-        // 클릭하고 동적인 일들이 끝날때까지 버튼막기
-        button_ban($('.right_icon'));
-        slide((main_idx + 1) % main_img_length,'right');
+        // 다음 요소 포스터를 보여주고 있으면 인디케이터만 움직여주기
+        if($('.indi').eq((main_idx + 1) % main_img_length).hasClass('item1')){
+            $('.indi').animate({left: `-=${main_img_move}`},timer).eq(main_idx % main_img_length).animate({left: 600},0)
+        }else{
+            slide((main_idx + 1) % main_img_length,'right');
+        }
         main_idx++;
-        // indi 클래스에 item1 다 삭제하고 현재 요소에 item1 클래스 넣어주기 
         $('.indi').removeClass('item1');
         $('.indi').eq(main_idx % main_img_length).addClass('item1')
+        // 클릭하고 동적인 일들이 끝날때까지 버튼막기
+        button_ban($('.right_icon'));
+        // indi 클래스에 item1 다 삭제하고 현재 요소에 item1 클래스 넣어주기 
     })
     // 메인배너 인디케이터 이벤트(클릭한 n번째 요소 배경,포스터,글자 바꾸기) 클릭한 인디케이터 상승
     $('.indi').on('click',function(){
         // 현재 클릭한 요소가 현재 보여주고 있는 요소면 아무일도 일어나지 않음
-        let curr_idx = $(this).index();
+    let curr_idx = $(this).index();
         if(!$('.indi').eq(curr_idx).hasClass('item1')){
             button_ban($('.indi'))
             $('.main_box').fadeOut(timer)
